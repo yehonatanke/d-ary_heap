@@ -8,12 +8,29 @@
 ## Overview
 The d-ary heap implements a D-ary max heap data structure in Java. It supports essential operations such as insertion, extraction of the maximum element, increasing a key, and building a max heap. The implementation utilizes an ArrayList as the underlying data structure and assumes 0-based indexing. Detailed comments, time, and space complexity analyses are provided for each method.
 
+## Table of Contents
+1. [General Information](#general-information)
+2. [Wikipedia Reference](#wikipedia-reference)
+3. [D-ary Heap Properties](#d-ary-heap-properties)
+4. [Installation](#installation)
+5. [Program Structure](#program-structure)
+   - [Constructors](#constructors)
+   - [Public Methods](#public-methods)
+   - [Private Methods](#private-methods)
+   - [Utility Methods](#utility-methods)
+6. [DaryHeapTest Class](#daryheaptest-class)
+   - [Overview](#overview)
+   - [Main Method](#main-method)
+   - [Utility Methods](#utility-methods-1)
+   - [Example Usage](#example-usage)
+7. [License](#license)
+
 ### General Information
 This program serves as an implementation for the course "Data Structures and Introduction to Algorithms" at The Open University. This practical implementation allows to interact with and explore the functionality of the D-ary Heap, a key data structure in the study of algorithms and data structures.
 
-## Wikipedia Reference
+### Wikipedia Reference
 
-### For a more detailed overview, you can visit: 
+#### For a more detailed overview, you can visit: 
    - [Binary heap](https://en.wikipedia.org/wiki/Binary_heap)
    - [d-ary heap](https://en.wikipedia.org/wiki/D-ary_heap)
 
@@ -25,7 +42,7 @@ A D-ary heap is a specialized data structure with the following properties:
 - **Heap Property:** In a max D-ary heap, for every node \( i \), the key of \( i \) is greater than or equal to the keys of its children.
 - **Representation:** The heap can be efficiently represented using an array.
 
-### Installation
+## Installation
 
 To use the DaryHeap library in your Java project, follow these simple steps:
 
@@ -43,17 +60,12 @@ To use the DaryHeap library in your Java project, follow these simple steps:
   - Run your project to utilize the D-ary heap functionality.
 
 
-## Table of Contents
-1. [Constructors](#constructors)
-2. [Public Methods](#public-methods)
-3. [Private Methods](#private-methods)
-4. [Utility Methods](#utility-methods)
-
-## Constructors
+## Program Structure
+### Constructors
 - `DaryHeap(int d)`: Initializes an empty D-ary max heap with the specified degree.
 - `DaryHeap(List<Integer> elements, int d)`: Initializes a D-ary max heap with the given elements and degree.
 
-## Public Methods
+### Public Methods
 - `void insert(Integer element)`: Inserts an element into the heap and maintains the max heap property.
 - `void buildMaxHeap()`: Builds the max heap from the given elements.
 - `Integer extractMax()`: Removes and returns the maximum element from the heap.
@@ -64,38 +76,38 @@ To use the DaryHeap library in your Java project, follow these simple steps:
 - `void printHeapByDepth()`: Prints the heap elements by depth level.
 - `boolean isMaxHeap()`: Checks if the heap is a valid max heap.
 
-## Private Methods
+### Private Methods
 - `int parent(int i)`: Returns the index of the parent of the element at index 'i'.
 - `int child(int i, int k)`: Returns the value of the k-th child of the element at index 'i'.
 - `void swap(int i, int j)`: Swaps the elements at indices 'i' and 'j'.
 - `void maxHeapify(int index)`: Maintains the max heap property starting from the given index.
 - `int findMaxChild(int index)`: Finds the maximum child's index of the element at the given index.
 
-## Utility Methods
+### Utility Methods
 - `static void printLine(String message)`: Prints a message followed by a newline.
 - `static void print(String message)`: Prints a message without a newline.
 
-# DaryHeapTest Class
+## **DaryHeapTest Class**
 
-## Overview
+### Overview
 The `DaryHeapTest` class serves as a demonstration and interaction point for the D-ary Heap implementation (`DaryHeap` class). The main method allows users to perform various actions on the D-ary Heap, such as insertion, extraction of the maximum element, building a max heap, increasing a key, deleting a key, and printing the heap by depth. The program continuously prompts the user for actions until manually exited.
 
-## Main Method
+### Main Method
 - `main(String[] args)`: Interacts with the D-ary Heap based on user input. It prompts the user to enter the degree of the D-ary heap, then allows them to choose actions to perform on the heap. The actions include inserting elements, extracting the maximum element, building a max-heap, increasing a key, deleting a key, and printing the heap by depth.
 
-## Utility Methods
+### Utility Methods
 - `buildNewHeap(Scanner scanner, int d)`: Builds a new D-ary heap using user input. It prompts the user to enter the number of elements and the elements themselves, then constructs and returns a new D-ary heap using the provided degree 'd'.
 - `printLine(String message)`: Prints a line to the standard output.
 - `print(String message)`: Prints a message to the standard output without a newline.
 
-## Example Usage
+### Example Usage
 ```java
 // Running the main program to interact with the D-ary Heap
 main(args);
 
 // Building a new D-ary heap using user input
 ```
-## General Methodology
+### General Methodology
 The `DaryHeapTest` class follows a user-driven approach, allowing interaction with the D-ary Heap implementation (`DaryHeap` class) through a command-line interface. The general methodology includes the following steps:
 
 1. **Degree Initialization:**
